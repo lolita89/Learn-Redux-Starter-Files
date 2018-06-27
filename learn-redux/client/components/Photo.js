@@ -10,7 +10,7 @@ const Photo = React.createClass({
             <div className="grid-photo-wrap">
             <Link to={`/view/${post.code}`}>
            <img src={post.display_src} alt={post.caption}
-           className="grid-photo"/>
+           className="grid-photo" />
             </Link>
 
             <CSSTransitionGroup transitionName="like"
@@ -30,7 +30,7 @@ const Photo = React.createClass({
                    <Link className="button" to={`/view/${post.code}`}>
                    <span className="comment-count">
                        <span className="speech-bubble"></span>
-                       {comments[post.code]}
+                       {comments[post.code] ? comments[post.code].length : 0};
                    </span>
                    </Link> 
                 </div>
